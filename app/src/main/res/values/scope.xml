@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--name里的值与AndroidManifest.xml的(xposedscope)模块作用范围相对应-->
+    <array name="xposed_scope">
+        <!--待填写需要hook的包名,每个包名对应一个item标签-->
+        <!--<item></item>-->
+    </array>
+</resources>
