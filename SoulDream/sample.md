@@ -13,19 +13,19 @@
 
 ---
 * 选择No Activity后点击NEXT
-  ![img.png](../images/soul-dream/img.png)
+  ![img.png](../../images/soul-dream/img.png)
 ---
 * 设置项目名称、包名、项目位置、开发语言、最小SDK，点击Finish
-  ![img.png](../images/soul-dream/img_1.png)
+  ![img.png](../../images/soul-dream/img_1.png)
 ---
 * 将项目视图切换为Project
-  ![img.png](../images/soul-dream/img_2.png)
+  ![img.png](../../images/soul-dream/img_2.png)
 ---
 * 删除无用的资源文件（长按Ctrl+鼠标左键将这些文件选中后，再按Delete键和Enter删除）
-  ![img.png](../images/soul-dream/img_3.png)
+  ![img.png](../../images/soul-dream/img_3.png)
 ---
 * 修改AndroidManifest.xml(安卓清单文件)
-  ![img.png](../images/soul-dream/img_6.png)
+  ![img.png](../../images/soul-dream/img_6.png)
 ---
 ## 配置环境
 
@@ -57,13 +57,13 @@
 ### 新建scope.xml文件
 ---
 > 在res的values新建scope.xml文件，(鼠标右击后点new，指向Values Resource File)
-![img.png](../images/soul-dream/img_4.png)
-![img.png](../images/soul-dream/img_5.png)
-![img.png](../images/soul-dream/img_8.png)
+![img.png](../../images/soul-dream/img_4.png)
+![img.png](../../images/soul-dream/img_5.png)
+![img.png](../../images/soul-dream/img_8.png)
 ---
 ### 修改settings.gradle（最外层项目级别的settings.gradle）
-  ![img.png](../images/soul-dream/img_9.png)
-  ![img.png](../images/soul-dream/img_10.png)
+  ![img.png](../../images/soul-dream/img_9.png)
+  ![img.png](../../images/soul-dream/img_10.png)
 
 ```groovy
 pluginManagement {
@@ -87,7 +87,7 @@ dependencyResolutionManagement {
 ### 修改settings.gradle（在app-src模块级别的settings.gradle）
 **修改gradle都需要重新同步Sync Now**
 > 在dependencies加入xposed依赖（可以将其他的依赖先注释）
-![img.png](../images/soul-dream/img_11.png)
+![img.png](../../images/soul-dream/img_11.png)
 
 ```groovy
     compileOnly 'de.robv.android.xposed:api:82'
@@ -95,25 +95,25 @@ dependencyResolutionManagement {
 ```
 ---
 ### 重新配置gradle版本（点击右上角的齿轮setting，选择Project Structure）
-  ![img.png](../images/soul-dream/img_12.png)
+  ![img.png](../../images/soul-dream/img_12.png)
 
 > 再选择Project将Android Gradle Plugin 设置为*7.1.2*版本，Gradle Version设置为*7.5.1*
-![img.png](../images/soul-dream/img_13.png)
+![img.png](../../images/soul-dream/img_13.png)
 > 删除test模块里的测试类，删除后在settings.gradle点击Sync Now
-![img.png](../images/soul-dream/img_14.png)
+![img.png](../../images/soul-dream/img_14.png)
 ---
 ### 点击导航栏的Build再选择Rebuild Project
-  ![img.png](../images/soul-dream/img_15.png)
+  ![img.png](../../images/soul-dream/img_15.png)
 
 ---
 ### 在app->res->main里新建一个资源文件（右击鼠标->New->Directory）
-  ![img.png](../images/soul-dream/img_16.png)
+  ![img.png](../../images/soul-dream/img_16.png)
 
 > 点击选择assets后按Enter
-![img.png](../images/soul-dream/img_17.png)
+![img.png](../../images/soul-dream/img_17.png)
 
 > 接着在assets新建文件xposed_init（New File）*文件名是固定的不能更改!改文件为xposed配置文件*
-![img.png](../images/soul-dream/img_18.png)
+![img.png](../../images/soul-dream/img_18.png)
 ---
 ### 在app->src->main->java里新建包结构（app、enums、factory、interfaces）
 
@@ -125,12 +125,12 @@ SoulDream
 ├── xmnh-souldream-interfaces -- 接口类
 ├── xmnh-souldream-factory -- 工厂类
 ```
-![img.png](../images/soul-dream/img_18.png)
+![img.png](../../images/soul-dream/img_18.png)
 
 ---
 ### 创建入口类RunHook需要implements IXposedHookLoadPackage
 > 并将包名加类名填写到xposed_init
-![img.png](../images/soul-dream/img_20.png)
+![img.png](../../images/soul-dream/img_20.png)
 ```java
 public class RunHook implements IXposedHookLoadPackage {
     // 上下文
